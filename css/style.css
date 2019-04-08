@@ -1,0 +1,253 @@
+@font-face {
+    font-family: "regular";
+    src: url(../fonts/Dokdo-Regular.ttf);
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "regular";
+    background: #000000;
+    color: #fff;
+    overflow: hidden;
+}
+
+.logo>a {
+    display: flex;
+    align-items: center;
+    width: 100vh;
+    color: #fff;
+    justify-content: space-around;
+    font-size: 4rem;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+.logo img {
+    border-radius: 50%;
+    border: #fff solid 3px;
+    width: 100px;
+    height: 100px;
+    padding: 0.5rem;
+    margin-left: 2rem;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#left {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+
+#right {
+    flex: 1;
+}
+
+/* Sign In */
+#signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding-bottom: 1rem;
+}
+
+#signin form {
+    width: 80%;
+    padding-bottom: 3rem;
+}
+
+#signin .logo {
+    margin-bottom: 8vh;
+}
+
+#signin label {
+    font-size: 1.9rem;
+    line-height: 2rem;
+}
+
+#signin .text-input {
+    margin-bottom: 1.3rem;
+    width: 100%;
+    border-radius: 2px;
+    background: #181818;
+    border: 1px solid #555;
+    padding: 0.5rem 1rem;
+    line-height: 1.3rem;
+}
+
+
+#signin .link-items {
+    display: flex;
+    justify-content: space-around;
+    gap: 0.5rem;
+    width: 40%;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#signin .primary-btn {
+    width: 100%;
+}
+
+#signin .secondary-button,
+.or,
+.links {
+    width: 80%;
+}
+
+#signin .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+#signin .or {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.2rem;
+    align-items: center;
+}
+
+#signin .or .bar {
+    flex: auto;
+    border: none;
+    height: 1px;
+    background: #aaa;
+}
+
+#signin .or span {
+    color: #ccc;
+    padding: 0 0.8rem;
+}
+
+/*Showcase*/
+#showcase {
+    background: url(../img/art-ball-shaped-circle-414860.jpg) no-repeat center center/cover;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    text-align: center;
+}
+
+#showcase .showcase-text {
+    font-size: 3rem;
+    width: 100%;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+
+#showcase .secondary-button {
+    width: 60%;
+    margin: auto;
+}
+
+/*Footer*/
+#main-footer {
+    color: #ccc;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 80%;
+    padding-top: 5rem;
+}
+
+#main-footer a {
+    color: #f96816;
+    text-decoration: underline;
+}
+
+/* Button*/
+
+.primary-btn {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 0;
+    border-radius: 2px;
+    background: #f96816;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+    font-family: regular;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.primary-btn:hover {
+    background-color: #ff7b39;
+}
+
+.secondary-button {
+    padding: 0.7rem 1rem;
+    height: 2.7rem;
+    display: block;
+    border: 1px solid #f4f4f4;
+    border-radius: 2px;
+    background: none;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.secondary-button:hover {
+    border-color: #ff7b39;
+    color: #ff7b39;
+}
+
+
+/* Media Queries */
+@media(min-width: 1200px) {
+    #left {
+        flex: 4;
+    }
+
+    #right {
+        flex: 6;
+    }
+}
+
+@media(max-width:768px) {
+    body {
+        overflow: auto;
+    }
+
+    #right {
+        display: none;
+    }
+
+    #left {
+        justify-content: start;
+        margin-top: 2vh;
+    }
+
+    #signin .logo {
+        margin-bottom: 2vh;
+    }
+
+    #signin .text-input {
+        margin-bottom: 0.7rem;
+    }
+
+    #main-footer {
+        padding-top: 1rem;
+    }
+}
